@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Background Chooser</title>
+<style>
+.box{
+margin: 5px;
+width: 100%;
+height: 100%;
+border: 4px solid black;
+background: no-repeat;
+object-fit: fill;
+background-size: 100%;
+font-size: 40px;
+}
+.gifBox{
+width: 23%;
+height: 22%;
+}
+</style>
+<script>
+$(document).ready(function(){
+$('#cat1').click(function(){
+$('.box').css({"background-image": "url('"+$('#cat1').attr('src')+"')"});
+$('#cat1').css('border','20px solid #ffbf00');
+});
+$('#cat2').click(function(){
+$('.box').css({"background-image": "url('"+$('#cat2').attr('src')+"')"});
+$('#cat2').css('border','20px solid #ffbf00');
+});
+$('#cat3').click(function(){
+$('.box').css({"background-image": "url('"+$('#cat3').attr('src')+"')"});
+$('#cat3').css('border','20px solid #ffbf00');
+});
+});
+</script>
+</head>
+<body>
+<div class="box">
+<center><h1>BACKGROUND SELECTOR</h1></center>
+<p><img class = "gifBox" src="includes/image/cat1.gif" alt="giphy" id = "cat1"></img></p>
+<p><img class = "gifBox" src="includes/image/cat2.gif" alt="giphy" id = "cat2"></img></p>
+<p><img class = "gifBox" src="includes/image/cat3.gif" alt="giphy" id = "cat3"></img></p>
+</div>
+</body>
+</html>
